@@ -1,7 +1,10 @@
-version: '2'
+version: '3'
 
 services:
   lab:              # This is just a name - it is used in our docker-compose command.
     build: .        # Build an image using the Dockerfile in directory "."
     volumes:
       - .:/code     # Map the directory "." on the host into "/code" in the container.
+
+  debian:
+    image: "debian:jessie-slim"
